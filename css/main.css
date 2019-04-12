@@ -1,0 +1,63 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	width: 100%;
+	font-size: 14px;
+	font-family: "宋体";
+	background-color: #FDFDFD;
+}
+ul,li{
+	list-style-type: none;
+}
+a:link{
+	text-decoration: none;
+}
+a:visited{
+	text-decoration: none;
+}
+a:hover{
+	text-decoration: none;
+}
+a:active{
+	text-decoration: none;
+}
+footer{
+	clear: both;
+	width: 100%;
+	height: 54px;
+	color: #C0C0C0;
+	text-align: center;
+	padding-top: 18px;
+	background-color: #131313;
+}
+/* footer span{
+	font-size: 14px;
+} */
+footer a{
+	font-size: 10px;
+}
+#mainCarousel{
+	margin-top: -20px;
+	margin-bottom: 50px;
+}
+#mainContent{
+	margin-bottom: 80px;
+}
+#mainContent a{
+	display: block;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+#mainContent a>img{
+	width: 100%;
+	border: 6px #FFFFFF solid;
+	border-radius: 16px;
+}
+#mainContent a:hover>img{
+	border: 5px #FFFFFF solid;
+}
+#mainContent a:hover>.caption>h3{
+	font-weight:bold
+}
