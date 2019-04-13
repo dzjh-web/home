@@ -26,16 +26,15 @@ a:active{
 footer{
 	clear: both;
 	width: 100%;
-	height: 60px;
 	color: #A0A0A0;
 	text-align: center;
-	padding-top: 36px;
+	margin-bottom: 10px;
 }
 /* footer span{
 	font-size: 14px;
 } */
 footer a{
-	font-size: 10px;
+	font-size: 8px;
 }
 #toTop>a{
 	display: block;
@@ -64,7 +63,7 @@ footer a{
 	margin-bottom: 50px;
 }
 #mainContent{
-	margin-bottom: 50px;
+	margin-bottom: 60px;
 }
 #mainContent a{
 	display: block;
