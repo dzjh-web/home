@@ -36,6 +36,13 @@ footer{
 footer a{
 	font-size: 8px;
 }
+header{
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	z-index: 20;
+}
 #toTop>a{
 	display: block;
 	width: 54px;
@@ -61,11 +68,16 @@ footer a{
 	opacity: 0.9;
 }
 #mainCarousel{
-	margin-top: -20px;
 	margin-bottom: 50px;
 }
 #mainContent{
 	margin-bottom: 60px;
+}
+#mainContent>.row>h1{
+	text-align: center;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+	border-bottom: 1px solid #ADADAD;
 }
 #mainContent a{
 	display: block;
