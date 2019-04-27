@@ -43,6 +43,9 @@ header{
 	right: 0;
 	z-index: 20;
 }
+header>.container{
+	margin-top: 10px;
+}
 #toTop>a{
 	display: block;
 	width: 54px;
@@ -70,24 +73,31 @@ header{
 #mainCarousel{
 	margin-bottom: 50px;
 }
+.carousel-caption{
+	padding-top: 10px;
+}
 #mainContent{
 	margin-bottom: 60px;
 }
 #mainContent>.row>h1{
 	text-align: center;
-	padding-bottom: 10px;
-	margin-bottom: 10px;
-	border-bottom: 1px solid #ADADAD;
+	padding-bottom: 20px;
+	margin: 30px 10px 30px 10px;
+	border-bottom: 1px solid #CDCDCD;
+	color: #337AB7;
+}
+#mainContent>.row>h1>b{
+	padding: 10px 20px;
+	border: 1px #CDCDCD solid;
 }
 #mainContent a{
 	display: block;
 	margin-top: 10px;
 	margin-bottom: 10px;
 }
-#mainContent a>img{
-	width: 100%;
-	border: 6px #FFFFFF solid;
-	border-radius: 16px;
+#mainContent .thumbnail>img{
+	padding: 4px;
+	border-radius: 10px;
 }
 #mainContent a:hover>img{
 	border: 5px #FFFFFF solid;

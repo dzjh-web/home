@@ -8,32 +8,44 @@
 	</head>
 	<body>
 		<header>
-			<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
-				<div class="container">
-					<div class="container-fluid navbar-header">
-						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#webNavCollapse">
-							<span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
-						</button>
-						<span class="navbar-brand">梦心DH</span>
-					</div>
-					<div id="webNavCollapse" class="collapse navbar-collapse">
-						<ul class="nav navbar-nav">
-							<li><a href="http://jimdreamheart.club/gitbook" target="_blank" title="个人文档">GitBook</a></li>
-							<li><a href="javascript:void();" target="_blank" title="python工具集成平台">PYToolsIP</a></li>
-						</ul>
-						<ul class="nav navbar-nav navbar-right">
-							<li><a href="javascript:void();" target="_blank" title="关于JimDreamHert" font-size=6>关于JDH</a></li>
-						</ul>
-					</div>
-				</div>
-			</nav>
+			<div class="container">
+				<nav class="navbar navbar-inverse" role="navigation">
+						<div class="container-fluid navbar-header">
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#webNavCollapse">
+								<span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+							</button>
+							<span class="navbar-brand">梦心DH</span>
+						</div>
+						<div id="webNavCollapse" class="collapse navbar-collapse">
+							<ul class="nav navbar-nav">
+								<li><a href="http://jimdreamheart.club/gitbook" target="_blank" title="个人GitBook文档">GitBook</a></li>
+								<li><a href="javascript:void();" target="_blank" title="python工具集成平台">PYToolsIP</a></li>
+							</ul>
+							<ul class="nav navbar-nav navbar-right">
+								<li><a href="javascript:void();" target="_blank" title="关于JimDreamHert" font-size=6>关于</a></li>
+							</ul>
+						</div>
+				</nav>
+			</div>
 		</header>
 		<div id="mainCarousel" class="carousel slide">
 			<!-- 轮播（Carousel）内容 -->
-			<div class="carousel-inner">
-				<a class="item active" href="http://jimdreamheart.club/gitbook" target="_blank" title="个人文档"><img src="img/JGitbook.png" alt="个人文档" width="100%" /></a>
-				<a class="item" href="javascript:void();" target="_blank" title="python工具集成平台"><img src="img/PyToolsIP.png" alt="PYToolsIP" width="100%" /></a>
-			</div>
+			<ul class="carousel-inner">
+				<li class="item active">
+					<img src="img/JGitbook.png" alt="个人文档" width="100%" />
+					<div class="carousel-caption">
+						<a class="btn btn-lg btn-primary" href="http://jimdreamheart.club/gitbook" target="_blank" title="个人GitBook文档">点击进入&raquo;</a>
+						<p>个人GitBook文档</p>
+					</div>
+				</li>
+				<li class="item">
+					<img class="first-slide" src="img/PyToolsIP.png" alt="PYToolsIP" width="100%" />
+					<div class="carousel-caption">
+						<a class="btn btn-lg btn-primary" href="javascript:void();" target="_blank" title="python工具集成平台">点击进入&raquo;</a>
+						<p>python工具集成平台</p>
+					</div>
+				</li>
+			</ul>
 			<!-- 轮播（Carousel）控制点 -->
 			<ol class="carousel-indicators">
 				<li data-target="#mainCarousel" data-slide-to="0" class="active"></li>
@@ -45,24 +57,30 @@
 		</div>
 		<div id="mainContent" class="container">
 			<div class="modal-content row">
-				<h1>- 链接列表 -</h1>
+				<h1><b>链接列表</b></h1>
 				<div class="col-md-4">
-					<a class="thumbnail" href="http://jimdreamheart.club/gitbook" target="_blank" title="GitBook">
+					<div class="thumbnail">
 						<img src="img/JGitBookPic.png" />
 						<div class="caption">
-							<h3>GitBook</h3>
+							<h3><b>GitBook</b></h3>
 							<p>个人日常开发的文档汇总</p>
+							<a class="btn btn-info" href="http://jimdreamheart.club/gitbook" target="_blank" title="个人GitBook文档">
+								点击进入&raquo;
+							</a>
 						</div>
-					</a>
+					</div>
 				</div>
 				<div class="col-md-4">
-					<a class="thumbnail" href="javascript:void();" target="_blank" title="python工具集成平台">
+					<div class="thumbnail">
 						<img src="img/PyToolsIPPic.png" />
 						<div class="caption">
-							<h3>PYToolsIP</h3>
+							<h3><b>PYToolsIP</b></h3>
 							<p>python工具集成平台（Python Tools Integrated Platform）</p>
+							<a class="btn btn-info" href="javascript:void();" target="_blank" title="python工具集成平台">
+								点击进入&raquo;
+							</a>
 						</div>
-					</a>
+					</div>
 				</div>
 			</div>
 		</div>
