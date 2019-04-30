@@ -46,6 +46,9 @@ header{
 header>.container{
 	margin-top: 20px;
 }
+header>.container>.navbar{
+	border: 6px #363636 solid;
+}
 #toTop>a{
 	display: block;
 	width: 54px;
