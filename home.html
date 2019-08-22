@@ -20,12 +20,17 @@
 						</ul>
 					</nav>
 					<div class="cover-content">
-						<h1>我的主站</h1>
-						<p class="lead">主要罗列了本人开发或使用的网站，以引导人们找到相应功能的站点。</p>
+						<div class="content-description-en">
+							<h1>MY WEB</h1>
+							<p class="lead">It lists the websites that I developed or used. And it's not only to show my personal works, but also to guide visitors or users to get the entrance of my site.</p>
+						</div>
+						<div class="content-description-ch hidden">
+							<h1>我的主站</h1>
+							<p class="lead">这里主要罗列了本人开发或使用的网站。而这不仅展示了个人的作品，还能用于引导访客或用户们找到我的站点入口。</p>
+						</div>
 						<div class="content-cols">
 							<div class="content-col" ontouchstart="this.classList.toggle('hover');">
 								<a href="http://jimdreamheart.club/pytoolsip" class="col-container center-block">
-									<!-- <a href="http://jimdreamheart.club/pytoolsip"> -->
 									<div class="col-container-front" style="background-image:url(homeres/img/pytoolsip.png);">
 										<div class="col-container-inner">
 											<p>PyToolsIP</p>
@@ -40,7 +45,7 @@
 								</a>
 							</div>
 							<div class="content-col" ontouchstart="this.classList.toggle('hover');">
-								<div class="col-container">
+								<a href="http://jimdreamheart.club/gitbook" class="col-container center-block">
 									<div class="col-container-front" style="background-image: url(homeres/img/gitbook.png);">
 										<div class="col-container-inner">
 											<p>MyGitBook</p>
@@ -52,10 +57,10 @@
 										  <p>基于<b>GitBook</b>发布的，用于记录工作、学习或日常编程的文档网站。</p>
 										</div>
 									</div>
-								</div>
+								</a>
 							</div>
 							<div class="content-col" ontouchstart="this.classList.toggle('hover');">
-								<div class="col-container">
+								<a href="https://github.com/JimDreamHeart" class="col-container center-block">
 									<div class="col-container-front" style="background-image: url(homeres/img/github.png);">
 										<div class="col-container-inner">
 											<p>MyGitHub</p>
@@ -67,15 +72,34 @@
 										  <p>个人GitHub地址。</p>
 										</div>
 									</div>
-								</div>
+								</a>
 							</div>
 						</div>
 					</div>
 					<div class="cover-footer">
-						<p style="color: #BCBCBC;">Copyright&nbsp;&copy;&nbsp;2019&nbsp;by&nbsp;<a href="https://github.com/JimDreamHeart" target="_blank" title="关于JimDreamHeart">梦心DH</a>.</p>
+						<p>Copyright&nbsp;&copy;&nbsp;2019&nbsp;by&nbsp;&nbsp;<a id="aboutDzjH" href="javascript:void(0);" title="关于梦心DH">D·zj·H</a>.</p>
 					</div>
 				</div>
 			</div>
 		</div>
+		<script src="http://jimdreamheart.club/resource/jquery/jquery-3.4.0.min.js"></script>
+        <script language="JavaScript">
+            $(function(){
+				$(".content-description-en").on("mouseenter", function(){
+					$(this).toggleClass("hidden");
+					$(".content-description-ch").toggleClass("hidden");
+				});
+				$(".content-description-ch").on("mouseleave", function(){
+					$(this).toggleClass("hidden");
+					$(".content-description-en").toggleClass("hidden");
+				});
+				$("#aboutDzjH").on("mouseenter", function(){
+					$(this).text("梦心DH");
+				});
+				$("#aboutDzjH").on("mouseleave", function(){
+					$(this).text("D·zj·H");
+				});
+            })
+        </script>
 	</body>
 </html>

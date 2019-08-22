@@ -34,6 +34,7 @@ body{
 	/* border-bottom: 1px #BCBCBC solid; */
 }
 .cover-header>h3{
+	cursor: pointer;
 	padding: 10px;
 	border: 1px #BCBCBC solid;
 }
@@ -42,20 +43,20 @@ body{
 	border-top: #000000 1px solid;
 	border-bottom: #000000 1px solid;
 }
-.cover-content>p{
-	padding: 0px 100px;
-	margin-top: 40px;
-	margin-bottom: 40px;
-}
 .cover-footer{
 	margin-bottom: 20px;
 }
-.cover-footer a{
+.cover-footer p{
 	font-size: 12px;
+	color: #ABABAB;
+}
+.cover-footer a{
+	font-size: 13px;
 	color: #FFFFFF;
 }
 .cover-footer a:hover{
-	color: #BCBCBC;
+	color: #E1E1E1;
+	text-decoration: underline;
 }
 .cover-nav{
 	margin-top: 40px;
@@ -247,4 +248,13 @@ body{
 	width: 100%;
 	margin: 0 0 32px 0;
   }
+}
+/*描述区域显示*/
+.content-description-en, .content-description-ch{
+	cursor: pointer;
+}
+.content-description-en>p, .content-description-ch>p{
+	padding: 0px 80px;
+	margin-top: 40px;
+	margin-bottom: 40px;
 }
