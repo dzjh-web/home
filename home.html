@@ -20,6 +20,7 @@
 				color: #FFFFFF;
 				background-color: #282828;
 			}
+			/*主界面*/
 			.cover{
 				display: table;
 				width: 100%;
@@ -45,12 +46,13 @@
 			}
 			.cover-content{
 				padding: 30px 10px;
-				border-top: 1px #BCBCBC solid;
-				border-bottom: 1px #BCBCBC solid;
+				border-top: #000000 1px solid;
+				border-bottom: #000000 1px solid;
 			}
 			.cover-content>p{
-				margin-top: 20px;
-				margin-bottom: 20px;
+				padding: 0px 100px;
+				margin-top: 40px;
+				margin-bottom: 40px;
 			}
 			.cover-footer{
 				margin-bottom: 20px;
@@ -78,7 +80,7 @@
 			.cover-nav>li>a:hover{
 				color: #BCBCBC;
 			}
-			@media screen and (min-width: 600px) and (min-height: 600px) {
+			@media screen and (min-width: 860px) and (min-height: 860px) {
 				.cover-header{
 					position: fixed;
 					top: 0;
@@ -97,10 +99,161 @@
 					float: right;
 				}
 			}
-			@media (min-width: 780px) {
+			@media (min-width: 1000px) {
 				.cover-header,.cover-footer,.cover-container{
-					width: 700px;
+					width: 960px;
 				}
+			}
+			/*反转效果*/
+			.content-cols{
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-ms-flex-wrap: wrap;
+				  flex-wrap: wrap;
+				-webkit-box-pack: center;
+				  -ms-flex-pack: center;
+					  justify-content: center;
+			}
+			.content-col{
+				width: 30%;
+				margin: 12px;
+				cursor: pointer;
+			}
+			.col-container{
+				-webkit-transform-style: preserve-3d;
+					  transform-style: preserve-3d;
+				-webkit-perspective: 1000px;
+						perspective: 1000px;
+			}
+			.col-container-front, .col-container-back{
+				background-size: cover;
+				background-position: center;
+				-webkit-transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+				transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+				-o-transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+				transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+				transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+				-webkit-backface-visibility: hidden;
+						backface-visibility: hidden;
+				text-align: center;
+				min-height: 240px;
+				height: auto;
+				border-radius: 10px;
+				color: #FFFFFF;
+				font-size: 24px;
+			}
+			.col-container-back{
+				background: #CEDCE7;
+				background: -webkit-linear-gradient(45deg,  #CEDCE7 0%,#596A72 100%);
+				background: -o-linear-gradient(45deg,  #CEDCE7 0%,#596A72 100%);
+				background: linear-gradient(45deg,  #CEDCE7 0%,#596A72 100%);
+			}
+			.col-container-front:after{
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: 1;
+				width: 100%;
+				height: 100%;
+				content: '';
+				display: block;
+				opacity: .6;
+				background-color: #000000;
+				-webkit-backface-visibility: hidden;
+						backface-visibility: hidden;
+				border-radius: 10px;
+			}
+			.col-container:hover .col-container-front,
+			.col-container:hover .col-container-back{
+				-webkit-transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+				transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+				-o-transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+				transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+				transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+			}
+			.col-container-back{
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+			}
+			.col-container-inner{
+				-webkit-transform: translateY(-50%) translateZ(60px) scale(0.94);
+						transform: translateY(-50%) translateZ(60px) scale(0.94);
+				top: 50%;
+				position: absolute;
+				left: 0;
+				width: 100%;
+				padding: 16px;
+				-webkit-box-sizing: border-box;
+						box-sizing: border-box;
+				outline: 1px solid transparent;
+				-webkit-perspective: inherit;
+						perspective: inherit;
+				z-index: 2;
+			}
+			.col-container .col-container-back{
+				-webkit-transform: rotateY(180deg);
+						transform: rotateY(180deg);
+				-webkit-transform-style: preserve-3d;
+						transform-style: preserve-3d;
+			}
+			.col-container .col-container-front{
+				-webkit-transform: rotateY(0deg);
+						transform: rotateY(0deg);
+				-webkit-transform-style: preserve-3d;
+						transform-style: preserve-3d;
+			}
+			.col-container:hover .col-container-back{
+			  -webkit-transform: rotateY(0deg);
+					  transform: rotateY(0deg);
+			  -webkit-transform-style: preserve-3d;
+					  transform-style: preserve-3d;
+			}
+			.col-container:hover .col-container-front{
+			  -webkit-transform: rotateY(-180deg);
+					  transform: rotateY(-180deg);
+			  -webkit-transform-style: preserve-3d;
+					  transform-style: preserve-3d;
+			}
+			.col-container-front .col-container-inner p{
+			  font-size: 32px;
+			  margin-bottom: 20px;
+			  position: relative;
+			}
+			.col-container-front .col-container-inner p:after{
+			  content: '';
+			  width: 100px;
+			  height: 2px;
+			  position: absolute;
+			  background: #C6D4DF;
+			  display: block;
+			  left: 0;
+			  right: 0;
+			  margin: 0 auto;
+			  bottom: -12px;
+			}
+			.col-container-front .col-container-inner span{
+			  color: rgba(255,255,255,0.6);
+			  font-family: 'Montserrat';
+			  font-weight: 300;
+			}
+			@media screen and (max-width: 1024px){
+			  .content-col{
+				width: calc(33.333333% - 32px);
+			  }
+			}
+			@media screen and (max-width: 768px){
+			  .content-col{
+				width: calc(50% - 32px);
+			  }
+			}
+			@media screen and (max-width: 512px){
+			  .content-col{
+				width: 100%;
+				margin: 0 0 32px 0;
+			  }
 			}
 		</style>
 	</head>
@@ -111,15 +264,62 @@
 					<nav class="cover-header">
 						<h3 class="cover-icon">JimDreamHeart</h3>
 						<ul class="cover-nav">
-							<li><a class="cover-icon" href="http://jimdreamheart.club/gitbook" target="_blank" title="个人GitBook文档">MyGitBook</a></li>
 							<li><a class="cover-icon" href="http://jimdreamheart.club/pytoolsip" target="_blank" title="python工具集成平台">PYToolsIP</a></li>
+							<li><a class="cover-icon" href="http://jimdreamheart.club/gitbook" target="_blank" title="个人GitBook文档">MyGitBook</a></li>
 							<li><a class="cover-icon" href="https://github.com/JimDreamHeart" target="_blank" title="个人GitHub">MyGitHub</a></li>
 						</ul>
 					</nav>
 					<div class="cover-content">
 						<h1>我的主站</h1>
-						<p class="lead">主要罗列了本人基于BootStrap框架开发的一系列站点，以引导人们在未知本人所开发功能或软件的站点时，可以通过主站找到相应的站点。</p>
-						<a class="btn btn-lg btn-info" href="http://jimdreamheart.club/home" title="梦心DH·个人主站">点击进入&nbsp;&raquo;</a>
+						<p class="lead">主要罗列了本人开发或使用的网站，以引导人们找到相应功能的站点。</p>
+						<div class="content-cols">
+							<div class="content-col" ontouchstart="this.classList.toggle('hover');">
+								<a href="http://jimdreamheart.club/pytoolsip" class="col-container center-block">
+									<!-- <a href="http://jimdreamheart.club/pytoolsip"> -->
+									<div class="col-container-front" style="background-image:url(img/pytoolsip.png);">
+										<div class="col-container-inner">
+											<p>PyToolsIP</p>
+											<span>DzjH</span>
+										</div>
+									</div>
+									<div class="col-container-back">
+										<div class="col-container-inner">
+											<p>基于<b>wxPython</b>框架开发，以提供用户可视化界面来使用<b>Python工具</b>的平台网站。</p>
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="content-col" ontouchstart="this.classList.toggle('hover');">
+								<div class="col-container">
+									<div class="col-container-front" style="background-image: url(img/gitbook.png);">
+										<div class="col-container-inner">
+											<p>MyGitBook</p>
+											<span>JDH</span>
+										</div>
+									</div>
+									<div class="col-container-back">
+										<div class="col-container-inner">
+										  <p>基于<b>GitBook</b>发布的，用于记录工作、学习或日常编程的文档网站。</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="content-col" ontouchstart="this.classList.toggle('hover');">
+								<div class="col-container">
+									<div class="col-container-front" style="background-image: url(img/github.png);">
+										<div class="col-container-inner">
+											<p>MyGitHub</p>
+											<span>JDH</span>
+										</div>
+									</div>
+									<div class="col-container-back">
+										<div class="col-container-inner">
+										  <p>个人GitHub地址。</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 					<div class="cover-footer">
 						<p style="color: #BCBCBC;">Copyright&nbsp;&copy;&nbsp;2019&nbsp;by&nbsp;<a href="https://github.com/JimDreamHeart" target="_blank" title="关于JimDreamHeart">梦心DH</a>.</p>
